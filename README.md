@@ -22,7 +22,8 @@ In order to not experience disk read/write speed bottlenecks when using mlc-llm 
 ```bash
 sudo fdisk -l
 ```
-   to find the storage you will be installing the OS on (Highlighted in red is the eMMC module I will be installing my OS on)<img width="539" alt="Pasted image 20240910125904" src="https://github.com/user-attachments/assets/c1fbc06f-944f-465b-bade-50967160d4f0">
+   to find the storage you will be installing the OS on (Highlighted in red is the eMMC module I will be installing my OS on)
+   <img width="539" alt="Pasted image 20240910125904" src="https://github.com/user-attachments/assets/c1fbc06f-944f-465b-bade-50967160d4f0">
 
 - Once you found the storage to install the OS on run the following command
 ```bash
@@ -187,6 +188,7 @@ Now run the following to check the build options used:
 python -c "import tvm; print('\n'.join(f'{k}: {v}' for k, v in tvm.support.libinfo().items()))"
 ```
 We should then be able to see opencl set to "ON"
+
 <img width="304" alt="Pasted image 20240910173823" src="https://github.com/user-attachments/assets/e9097e30-664b-4a76-b80e-e13ce060a6f9">
 
 
