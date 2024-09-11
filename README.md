@@ -63,7 +63,7 @@ echo "/usr/lib/libmali-valhall-g610-g6p0-x11-wayland-gbm.so" | sudo tee /etc/Ope
 
 
 ## Install Conda - miniconda (optional but recommended)
-While not necessary using conda will make managing dependencies for your build environment.
+While not necessary using conda will make managing dependencies for your build environment much easier.
 - Grab the latest installer script for your hardware [here](https://docs.anaconda.com/miniconda/) for the Orange Pi 5 Pro I will be using "Miniconda3 Linux-aarch64 64-bit" as the device is using an arm64 CPU.
 - Run the following, change the installer script url accordingly
 ```bash
