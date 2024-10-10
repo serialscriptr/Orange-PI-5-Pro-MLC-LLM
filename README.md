@@ -105,7 +105,6 @@ mlc-llm provides pre-compiles tvm packages which should be fine for our uses but
 ### Some prerequisites
 Since these packages are required when building mlc-llm I install them with apt install but you could optionally install them to your build environment with conda. Either way make sure these packages are install prior to attempting to compile TVM-Unity
 - Doxygen
-- tqdm
 - Graphviz
 - build-essential (ubuntu specific package. Install the equivalent for your OS)
 - zlib1g-dev
@@ -182,6 +181,12 @@ python -c "import tvm; print(tvm.__file__)"
 ```
 which should output something similar to: ![Pasted image 20240910173413](https://github.com/user-attachments/assets/ed4880f6-1e75-4f95-bc7f-244c4a4e838d)
 
+10/10/24: You may see errors about "-mcpu=apple-latest" this is safe to ignore provided the final output is similar to the output shown above. Ex:
+```bash
+[20:09:46] /home/ubuntu/tvm-unity/src/target/llvm/llvm_instance.cc:226: Error: Using LLVM 19.1.1 with `-mcpu=apple-latest` is not valid in `-mtriple=arm64-apple-macos`, using default `-mcpu=generic`
+[20:09:46] /home/ubuntu/tvm-unity/src/target/llvm/llvm_instance.cc:226: Error: Using LLVM 19.1.1 with `-mcpu=apple-latest` is not valid in `-mtriple=arm64-apple-macos`, using default `-mcpu=generic`
+[20:09:46] /home/ubuntu/tvm-unity/src/target/llvm/llvm_instance.cc:226: Error: Using LLVM 19.1.1 with `-mcpu=apple-latest` is not valid in `-mtriple=arm64-apple-macos`, using default `-mcpu=generic`
+```
 
 Now run the following to check the build options used: 
 ```bash
@@ -199,7 +204,6 @@ We should then be able to see opencl set to "ON"
 There is only one other package required here compared to the tvm-unity section. If you installed the packages included in the tvm-unity section then you only need to install git-lfs
 - git-lfs
 - Doxygen
-- tqdm
 - Graphviz
 - build-essential (ubuntu specific package. Install the equivalent for your OS)
 - zlib1g-dev
@@ -289,6 +293,13 @@ python -c "import mlc_llm; print(mlc_llm)"
 if successful you should see something along the lines of:
 ```
 <module 'mlc_llm' from '/home/ubuntu/mlc-llm/python/mlc_llm/__init__.py'>
+```
+
+10/10/24: You may see errors about "-mcpu=apple-latest" this is safe to ignore provided the final output is similar to the output shown above. Ex:
+```bash
+[20:09:46] /home/ubuntu/tvm-unity/src/target/llvm/llvm_instance.cc:226: Error: Using LLVM 19.1.1 with `-mcpu=apple-latest` is not valid in `-mtriple=arm64-apple-macos`, using default `-mcpu=generic`
+[20:09:46] /home/ubuntu/tvm-unity/src/target/llvm/llvm_instance.cc:226: Error: Using LLVM 19.1.1 with `-mcpu=apple-latest` is not valid in `-mtriple=arm64-apple-macos`, using default `-mcpu=generic`
+[20:09:46] /home/ubuntu/tvm-unity/src/target/llvm/llvm_instance.cc:226: Error: Using LLVM 19.1.1 with `-mcpu=apple-latest` is not valid in `-mtriple=arm64-apple-macos`, using default `-mcpu=generic`
 ```
 
 ## Running mlc-llm
