@@ -8,6 +8,8 @@ Sources:
 
 Please open an issue if you find something that can be improved in this guide
 
+See benchmarks for various models I've tested [here](https://github.com/serialscriptr/Orange-PI-5-Pro-MLC-LLM/blob/main/mlc-llm%20benchmarks.md)
+
 ## Prepare the hardware
 While this guide is tailored to the Orange Pi 5 Pro it could also be used as a generic guide for other boards using rockchip. Make sure your hardware is properly cooled with a fan and heatsinks as the hardware may overheat or thermal throttle.
 ## Install Ubuntu for Rockchip
