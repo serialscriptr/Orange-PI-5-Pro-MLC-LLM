@@ -112,6 +112,7 @@ Since these packages are required when building mlc-llm I install them with apt 
 - zlib1g-dev
 - libfl-dev
 - clang
+- libxml2-dev
 #### PIP prerequisites
 The following python modules are required in order for us to run mlc-llm and test our tvm-unity build. If you are not using conda you will need to install and use python3-pip
 - numpy
