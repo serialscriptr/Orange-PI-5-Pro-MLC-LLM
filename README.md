@@ -106,13 +106,18 @@ mlc-llm provides pre-compiles tvm packages which should be fine for our uses but
 
 ### Some prerequisites
 Since these packages are required when building mlc-llm I install them with apt install but you could optionally install them to your build environment with conda. Either way make sure these packages are install prior to attempting to compile TVM-Unity
-- Doxygen
-- Graphviz
+- doxygen
+- graphviz
 - build-essential (ubuntu specific package. Install the equivalent for your OS)
 - zlib1g-dev
 - libfl-dev
 - clang
 - libxml2-dev
+
+```bash
+sudo apt install doxygen graphviz build-essential zlib1g-dev libfl-dev clang libxml2-dev
+```
+
 #### PIP prerequisites
 The following python modules are required in order for us to run mlc-llm and test our tvm-unity build. If you are not using conda you will need to install and use python3-pip
 - numpy
@@ -121,6 +126,16 @@ The following python modules are required in order for us to run mlc-llm and tes
 - typing_extensions
 - packaging
 - attrs
+- cython
+
+Using pip
+```bash
+pip install numpy decorator psutil typing_extensions packaging attrs cython
+```
+Using conda
+```bash
+conda install numpy decorator psutil typing_extensions packaging attrs cython
+```
 ### Using conda
 The following commands are for setting up a build environment for compiling TVM-Unity. If you skipped the conda installation you can attempt to install these dependencies using apt install. If manually installing these packages with apt install make sure you are installing the correct versions as by default it will install the latest version of each package.
 
@@ -220,13 +235,18 @@ The following python modules are required in order for us to run mlc-llm. If you
 - typing_extensions
 - packaging
 - attrs
-- Pydantic
+- pydantic
 - shortuuid
 - fastapi
 - requests
 - tqdm
 - prompt_toolkit
 - uvicorn
+- cython
+
+```bash
+pip install numpy decorator psutil typing_extensions packaging attrs pydantic shortuuid fastapi requests tqdm prompt_toolkit uvicorn cython
+```
 
 ### Conda environment (optional but recommended)
 If you have conda installed from earlier perform the following to setup a build environment for mlc-llm. Note that if you aren't using conda you need to have the packages installed on your OS with the recommended versions.
